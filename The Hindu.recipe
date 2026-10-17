@@ -1,0 +1,28 @@
+
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class TheHindu(BasicNewsRecipe):
+    title = 'The Hindu'
+    __author__ = 'The Hindu'
+    language = 'en_IN'
+    encoding = 'utf-8'
+
+    oldest_article = 2
+    max_articles_per_feed = 50
+    use_embedded_content = False
+    remove_empty_feeds = True
+
+    feeds = [
+        ('Latest News',
+         'https://www.thehindu.com/news/feeder/default.rss'),
+        ('National',
+         'https://www.thehindu.com/news/national/feeder/default.rss'),
+        ('International',
+         'https://www.thehindu.com/news/international/feeder/default.rss'),
+        ('Business',
+         'https://www.thehindu.com/business/feeder/default.rss'),
+        ('Opinion',
+         'https://www.thehindu.com/opinion/feeder/default.rss'),
+        ('Science and Technology',
+         'https://www.thehindu.com/sci-tech/feeder/default.rss'),
+    ]
