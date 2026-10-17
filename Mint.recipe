@@ -1,0 +1,28 @@
+
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class Mint(BasicNewsRecipe):
+    title = 'Mint'
+    __author__ = 'Mint'
+    language = 'en_IN'
+    encoding = 'utf-8'
+
+    oldest_article = 2
+    max_articles_per_feed = 50
+    use_embedded_content = False
+    remove_empty_feeds = True
+
+    feeds = [
+        ('Latest News',
+         'https://www.livemint.com/rss/newsRSS'),
+        ('Markets',
+         'https://www.livemint.com/rss/marketsRSS'),
+        ('Companies',
+         'https://www.livemint.com/rss/companiesRSS'),
+        ('Money',
+         'https://www.livemint.com/rss/moneyRSS'),
+        ('Technology',
+         'https://www.livemint.com/rss/technologyRSS'),
+        ('Opinion',
+         'https://www.livemint.com/rss/opinionRSS'),
+    ]
